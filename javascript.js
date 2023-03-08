@@ -17,6 +17,7 @@ function getComputerChoice() {
 }
 
 function playRound (playerSelection, computerSelection) {
-    playerSelection.toLowerCase;
+    playerSelection = playerSelection.toLowerCase;
+    computerSelection = getComputerChoice();
 
 }
