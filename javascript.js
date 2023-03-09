@@ -22,16 +22,21 @@ function playRound (playerSelection, computerSelection) {
     /*console.log(computerSelection);
     console.log(playerSelection);*/
     
-    if (playerSelection === computerSelection) {
-        return ('It\'s a draw')
-    } else if ( playerSelection === "rock" && computerSelection === "scissors" ||
-        playerSelection === "paper" && computerSelection === "rock" ||
-        playerSelection === "scissors" && computerSelection === "paper" ) { 
-            return (`You won, ${playerSelection} beats ${computerSelection}.`)
-        }
-        else {
-            return (`You lost, ${computerSelection} beats ${playerSelection}.`)
-        }
+    if (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+        return ('You need to enter "rock", "paper", or "scissors".')
+    }
+    else {
+        if (playerSelection === computerSelection) {
+            return ('It\'s a draw')
+        } else if ( playerSelection === "rock" && computerSelection === "scissors" ||
+            playerSelection === "paper" && computerSelection === "rock" ||
+            playerSelection === "scissors" && computerSelection === "paper" ) { 
+                return (`You won, ${playerSelection} beats ${computerSelection}.`)
+            }
+            else {
+                return (`You lost, ${computerSelection} beats ${playerSelection}.`)
+            }
+    }
 }
 
 function game() {
@@ -40,4 +45,5 @@ function game() {
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
     }
+    return ('If you want to play again then refresh the pager, please.')
 }
