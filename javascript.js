@@ -19,8 +19,8 @@ function getComputerChoice() {
 function playRound (playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice();
-    console.log(computerSelection);
-    console.log(playerSelection);
+    /*console.log(computerSelection);
+    console.log(playerSelection);*/
     
     if (playerSelection === computerSelection) {
         return ('It\'s a draw')
@@ -32,4 +32,12 @@ function playRound (playerSelection, computerSelection) {
         else {
             return (`You lost, ${computerSelection} beats ${playerSelection}.`)
         }
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        let playerSelection = prompt('Enter "rock", "paper" or "scissors".');
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+    }
 }
