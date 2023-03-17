@@ -39,6 +39,8 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+
+/*
 function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt('Enter "rock", "paper" or "scissors".');
@@ -47,3 +49,4 @@ function game() {
     }
     return ('If you want to play again then refresh the pager, please.')
 }
+*/
