@@ -16,9 +16,9 @@ function getComputerChoice() {
 
 }
 
-function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection) {
     playerSelection = playerSelection.toLowerCase();
-    computerSelection = getComputerChoice();
+    let computerSelection = getComputerChoice();
     /*console.log(computerSelection);
     console.log(playerSelection);*/
     
@@ -39,8 +39,20 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
-const buttons = document.querySelectorAll('button');
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', function() {
+	console.log(playRound("rock"));
+});
 
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', function (e){
+	console.log(e);
+});
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', function(e){
+	console.log(e);
+})
 
 /*
 function game() {
