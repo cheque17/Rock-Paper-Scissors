@@ -39,9 +39,12 @@ function playRound (playerSelection) {
     }
 }
 
+const results = document.querySelector('#results');
+
+
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', function() {
-	console.log(playRound("rock"));
+	results.textContent = (playRound("rock"));
 });
 
 const paper = document.querySelector('#paper');
