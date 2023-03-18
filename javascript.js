@@ -39,6 +39,9 @@ function playRound (playerSelection) {
     }
 }
 
+let userScore = 0;
+let computerScore = 0;
+
 const results = document.querySelector('#results');
 
 
@@ -67,3 +70,4 @@ function game() {
     return ('If you want to play again then refresh the pager, please.')
 }
 */
+
