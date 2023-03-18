@@ -48,13 +48,13 @@ rock.addEventListener('click', function() {
 });
 
 const paper = document.querySelector('#paper');
-paper.addEventListener('click', function (e){
-	console.log(e);
+paper.addEventListener('click', function() {
+	results.textContent = playRound('paper');
 });
 
 const scissors = document.querySelector('#scissors');
-scissors.addEventListener('click', function(e){
-	console.log(e);
+scissors.addEventListener('click', function(){
+	results.textContent = playRound('scissors');
 })
 
 /*
