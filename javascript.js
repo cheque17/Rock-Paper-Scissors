@@ -39,6 +39,8 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+const buttons = document.querySelectorAll('button');
+
 
 /*
 function game() {
