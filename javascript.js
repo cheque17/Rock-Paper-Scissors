@@ -41,10 +41,11 @@ const results = document.querySelector('#results');
 
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', function() {
-  results.textContent = (playRound("rock"));
-  if (playRound('rock').substring(0,7) === "You won"){
+  let choiceRock = playRound('rock')
+  results.textContent = choiceRock;
+  if (choiceRock.substring(0,7) === "You won"){
     userScore += 1;
-  } else if ( playRound('rock').substring(0,8) === "You lost"){
+  } else if ( choiceRock.substring(0,8) === "You lost"){
     computerScore += 1;
   } else{
     userScore+=0;
