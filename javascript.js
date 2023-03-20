@@ -48,23 +48,37 @@ const results = document.querySelector('#results');
 const rock = document.querySelector('#rock');
 rock.addEventListener('click', function() {
 	results.textContent = (playRound("rock"));
+    if (playRound('rock').substring(0,7) === "You won"){
+        userScore += 1;
+    } else if ( playRound('rock').substring(0,8) === "You lost"){
+        computerScore += 1;
+    } else{}
 });
 
 const paper = document.querySelector('#paper');
 paper.addEventListener('click', function() {
 	results.textContent = playRound('paper');
+    if (playRound('paper').substring(0,7) === "You won"){
+        userScore += 1;
+    } else if ( playRound('paper').substring(0,8) === "You lost"){
+        computerScore += 1;
+    } else{}
 });
 
 const scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', function(){
 	results.textContent = playRound('scissors');
+    if (playRound('scissors').substring(0,7) === "You won"){
+        userScore += 1;
+    } else if ( playRound('scissors').substring(0,8) === "You lost"){
+        computerScore += 1;
+    } else{}
 })
 
-userScore=5;
 
-const gameStart = document.querySelectorAll('button');
+const scoreEvaluation = document.querySelectorAll('button');
 const goal = 5;
-gameStart .addEventListener('click', ()=> {
+scoreEvaluation.addEventListener('click', function() {
     if (userScore === goal){
         results.textContent = "YOU WON!";
     } else if (computerScore === goal){
