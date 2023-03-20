@@ -52,7 +52,10 @@ rock.addEventListener('click', function() {
         userScore += 1;
     } else if ( playRound('rock').substring(0,8) === "You lost"){
         computerScore += 1;
-    } else{}
+    } else{
+        userScore+=0;
+        computerScore+=0;
+    }
 });
 
 const paper = document.querySelector('#paper');
@@ -62,7 +65,10 @@ paper.addEventListener('click', function() {
         userScore += 1;
     } else if ( playRound('paper').substring(0,8) === "You lost"){
         computerScore += 1;
-    } else{}
+    } else{
+        userScore+=0;
+        computerScore+=0;
+    }
 });
 
 const scissors = document.querySelector('#scissors');
@@ -72,11 +78,14 @@ scissors.addEventListener('click', function(){
         userScore += 1;
     } else if ( playRound('scissors').substring(0,8) === "You lost"){
         computerScore += 1;
-    } else{}
+    } else{
+        userScore+=0;
+        computerScore+=0;
+    }
 })
 
 
-const scoreEvaluation = document.querySelectorAll('button');
+/*const scoreEvaluation = document.querySelectorAll('button');
 const goal = 5;
 scoreEvaluation.addEventListener('click', function() {
     if (userScore === goal){
@@ -84,7 +93,7 @@ scoreEvaluation.addEventListener('click', function() {
     } else if (computerScore === goal){
         results.textContent = "YOU LOST";
     } else{}
-})
+})*/
 
 /*
 function game() {
