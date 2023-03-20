@@ -60,6 +60,18 @@ scissors.addEventListener('click', function(){
 	results.textContent = playRound('scissors');
 })
 
+userScore=5;
+
+const gameStart = document.querySelectorAll('button');
+const goal = 5;
+gameStart .addEventListener('click', ()=> {
+    if (userScore === goal){
+        results.textContent = "YOU WON!";
+    } else if (computerScore === goal){
+        results.textContent = "YOU LOST";
+    } else{}
+})
+
 /*
 function game() {
     for (let i = 0; i < 5; i++) {
