@@ -55,10 +55,11 @@ rock.addEventListener('click', function() {
 
 const paper = document.querySelector('#paper');
 paper.addEventListener('click', function() {
-	results.textContent = playRound('paper');
-  if (playRound('paper').substring(0,7) === "You won"){
+  let choicePaper= playRound('paper')
+	results.textContent = choicePaper;
+  if (choicePaper.substring(0,7) === "You won"){
     userScore += 1;
-  } else if ( playRound('paper').substring(0,8) === "You lost"){
+  } else if ( choicePaper.substring(0,8) === "You lost"){
     computerScore += 1;
   } else{
     userScore+=0;
@@ -68,10 +69,11 @@ paper.addEventListener('click', function() {
 
 const scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', function(){
-	results.textContent = playRound('scissors');
-  if (playRound('scissors').substring(0,7) === "You won"){
+  let choiceScissors = playRound('scissors')
+	results.textContent = choiceScissors;
+  if (choiceScissors.substring(0,7) === "You won"){
     userScore += 1;
-  } else if ( playRound('scissors').substring(0,8) === "You lost"){
+  } else if (choiceScissors.substring(0,8) === "You lost"){
     computerScore += 1;
   } else{
     userScore+=0;
