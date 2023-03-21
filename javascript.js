@@ -37,6 +37,8 @@ let userScore = 0;
 let computerScore = 0;
 
 const results = document.querySelector('#results');
+const userPoints = document.querySelector('#userPoints');
+const computerPoints = document.querySelector('#computerPoints');
 
 
 const rock = document.querySelector('#rock');
