@@ -51,6 +51,7 @@ rock.addEventListener('click', function() {
     userScore+=0;
     computerScore+=0;
   }
+  evaluateScore();
 });
 
 const paper = document.querySelector('#paper');
@@ -65,6 +66,7 @@ paper.addEventListener('click', function() {
     userScore+=0;
     computerScore+=0;
   }
+  evaluateScore();
 });
 
 const scissors = document.querySelector('#scissors');
@@ -79,18 +81,34 @@ scissors.addEventListener('click', function(){
     userScore+=0;
     computerScore+=0;
   }
+  evaluateScore();
 })
 
+function evaluateScore (){
+  const goal = 5;
+  if (userScore===goal) {
+    results.textContent = 'YOU WON!';
+  } else if (computerScore===goal) {
+    results.textContent = 'YOU LOST!';
+} else {}
+}
 
-/*const scoreEvaluation = document.querySelectorAll('button');
+
+/*
+const scoreEvaluation = document.querySelectorAll('button');
 const goal = 5;
-scoreEvaluation.addEventListener('click', function() {
-  if (userScore === goal){
-    results.textContent = "YOU WON!";
-  } else if (computerScore === goal){
-    results.textContent = "YOU LOST";
-  } else{}
-})*/
+scoreEvaluation.forEach ((button) => {
+  scoreEvaluation.addEventListener('click', function(){
+    if (userScore===goal) {
+      results.textContent = 'YOU WON!';
+    } else if (computerScore===goal) {
+      results.textContent = 'YOU LOST!';
+  } else {}
+  })
+})
+*/
+
+
 
 /*
 function game() {
@@ -99,7 +117,7 @@ function game() {
     let computerSelection = getComputerChoice();
     console.log(playRound(playerSelection, computerSelection));
   }
-  return ('If you want to play again then refresh the pager, please.');
+  return ('If you want to play again then refresh the page, please.');
 }
 */
 
