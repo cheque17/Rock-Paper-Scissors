@@ -53,6 +53,8 @@ rock.addEventListener('click', function() {
     userScore+=0;
     computerScore+=0;
   }
+  userPoints.textContent = `${userScore}`;
+  computerPoints.textContent = `${computerScore}`;
   evaluateScore();
 });
 
@@ -68,6 +70,8 @@ paper.addEventListener('click', function() {
     userScore+=0;
     computerScore+=0;
   }
+  userPoints.textContent = `${userScore}`;
+  computerPoints.textContent = `${computerScore}`;
   evaluateScore();
 });
 
@@ -83,6 +87,8 @@ scissors.addEventListener('click', function(){
     userScore+=0;
     computerScore+=0;
   }
+  userPoints.textContent = `${userScore}`;
+  computerPoints.textContent = `${computerScore}`;
   evaluateScore();
 })
 
